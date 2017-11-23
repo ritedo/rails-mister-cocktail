@@ -4,3 +4,4 @@
   <%= f.input :ingredient, collection: Ingredient.all %>
   <%= f.submit "add a dose", class: "btn btn-primary" %>
 <% end %>
+<%= link_to '<i class="fa fa-undo" aria-hidden="true"></i> Back'.html_safe, cocktail_path(@cocktail), class: "btn" %>

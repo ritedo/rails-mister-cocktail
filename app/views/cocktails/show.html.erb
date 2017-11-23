@@ -1,10 +1,11 @@
 <h1><%= @cocktail.name %></h1>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to '<i class="fa fa-trash-o" aria-hidden="true">'.html_safe, cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } %></i>
+    <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to '<i class="fa fa-trash-o" aria-hidden="true"></i>'.html_safe, cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Back", cocktails_path %>
+<%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>
+ Add a dose'.html_safe, new_cocktail_dose_path(@cocktail), class: "btn" %>
+<%= link_to '<i class="fa fa-undo" aria-hidden="true"></i> Back'.html_safe, cocktails_path, class: "btn" %>
