@@ -12,7 +12,11 @@ class DosesController < ApplicationController
     redirect_to cocktail_path(@dose.cocktail)
   end
 
-  def delete
+  def destroy
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose = Dose.find(params[:id])
+    @dose.destroy
+    redirect_to cocktail_path(@cocktail)
   end
 
   private

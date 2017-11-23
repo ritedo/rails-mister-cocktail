@@ -1,7 +1,8 @@
 <h1><%= @cocktail.name %></h1>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %> <%= dose.ingredient.name %></li>
+    <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to '<i class="fa fa-trash-o" aria-hidden="true">'.html_safe, cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } %></i>
+    </li>
   <% end %>
 </ul>
 
