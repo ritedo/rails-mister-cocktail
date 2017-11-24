@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.4'
 ruby '2.3.5'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
